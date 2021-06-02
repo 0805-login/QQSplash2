@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--FrameLayout内部子控件可进行重叠-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashActivity">
+
+    <!--
+    抽取属性的作用：实现自定义属性的复用
+    将layout_width和layout_height属性抽取到style文件中
+    右键-Refactor-style
+    <style name="video_view_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    -->
+    <com.example.qqsplash2.FullScreenVideoView
+        android:id="@+id/vv_play"
+        style="@style/video_view_style" />
+    <!--dp字体大小不随系统设置改变而改变 sp反之-->
+    <TextView
+        android:id="@+id/tv_splash_timer"
+        android:textSize="18dp"
+        android:textColor="@color/color_ffffff"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:text="跳过"
+        android:background="@drawable/shape_splah"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>
