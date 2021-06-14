@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QQSplash2">
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".main.MainActivity"></activity>
         <activity
-            android:name=".SplashActivity"
+            android:name=".Splash.SplashActivity"
             android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

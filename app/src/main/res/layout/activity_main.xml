@@ -1,10 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <FrameLayout
+        android:id="@+id/fl_main_content"
+        android:layout_above="@+id/fl_bottom"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="我是主页"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fac_main_button"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <!-- alt + enter 抽取属性值-->
+    <FrameLayout
+        android:id="@+id/fl_bottom"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_black_30"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50">
+
+        <RadioGroup
+            android:id="@+id/rg_main_top"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--android:button="@null"去掉默认的小圆圈-->
+            <RadioButton
+                android:id="@+id/rg_main_shanghai"
+                android:drawableTop="@drawable/selector_main_top_tab_shanghai"
+                android:text="@string/str_main_shanghai"
+                style="@style/main_tab_rb_style" />
+
+            <RadioButton
+                android:id="@+id/rg_main_hangzhou"
+                android:text="@string/str_main_hangzhou"
+                android:drawableTop="@drawable/selector_main_top_tab_hangzhou"
+                style="@style/main_tab_rb_style"
+               />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/rg_main_bottom"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--android:button="@null"去掉默认的小圆圈-->
+            <RadioButton
+                android:id="@+id/rg_main_beijing"
+                android:drawableTop="@drawable/selector_main_top_tab_beijing"
+                android:text="@string/str_main_beijing"
+                style="@style/main_tab_rb_style" />
+
+            <RadioButton
+                android:id="@+id/rg_main_shenzhen"
+                android:text="@string/str_main_shenzhen"
+                android:drawableTop="@drawable/selector_main_top_tab_shenzhen"
+                style="@style/main_tab_rb_style"
+                />
+
+        </RadioGroup>
+    </FrameLayout>
+    
+</RelativeLayout>

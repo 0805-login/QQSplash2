@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity">
+    tools:context=".Splash.SplashActivity">
 
     <!--
     抽取属性的作用：实现自定义属性的复用
@@ -17,7 +17,7 @@
         <item name="android:layout_height">match_parent</item>
     </style>
     -->
-    <com.example.qqsplash2.FullScreenVideoView
+    <com.example.qqsplash2.Splash.FullScreenVideoView
         android:id="@+id/vv_play"
         style="@style/video_view_style" />
     <!--dp字体大小不随系统设置改变而改变 sp反之-->

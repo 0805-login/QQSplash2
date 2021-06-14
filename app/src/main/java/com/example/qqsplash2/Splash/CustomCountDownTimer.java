@@ -1,4 +1,4 @@
-package com.example.qqsplash2;
+package com.example.qqsplash2.Splash;
 
 import android.os.Handler;
 
